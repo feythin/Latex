@@ -48,7 +48,13 @@
 \moderncvtheme[green]{classic}                % idem
 
 % character encoding
-
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[L]{\footnotesize\textit{feythin.lau's resume}}
+\fancyfoot[C]{\footnotesize\thepage/\pageref{LastPage}}
+\fancyfoot[R]{\footnotesize\textit{Last updated: \today}}
 
 % adjust the page margins
 \usepackage[scale=0.8]{geometry}
@@ -59,15 +65,18 @@
 % personal data
 \firstname{刘飞宇}
 \familyname{}
-\title{个人简历}               % optional, remove the line if not wanted
-%\address{杭州}{中国}    % optional, remove the line if not wanted
+\title{Feythin Lau}               % optional, remove the line if not wanted
+
 \mobile{18511357785}                    % optional, remove the line if not wanted
 %\phone{000-238217878}                      % optional, remove the line if not wanted
 %\fax{fax (optional)}                          % optional, remove the line if not wanted
 \email{feythin.lau@gmail.com}                     % optional, remove the line if not wanted
-\extrainfo{www.liufeiyu.cn} % optional, remove the line if not wanted
-\photo[64pt]{picture}                         % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
-%\quote{China\TeX 您的LaTeX乐园，TeX\&\LaTeX 王国}                 % optional, remove the line if not wante
+\homepage{www.liufeiyu.cn} % optional, remove the line if not wanted
+\photo[64pt]{picture} 
+\address{北京市海淀区西三旗建材城西路育新花园}    % optional, remove the line if not wanted
+%\extrainfo{北京}
+% '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
+%\quote{}                 % optional, remove the line if not wante
 %\quote{一切皆有可能} 
 %\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
 
@@ -84,8 +93,8 @@
 \cvcomputer{出生日期：}{1986-03-23}{政治面貌：}{中共党员}
 \section{求职意向}
 \cvline{工作性质}{\emph{全职}}
-\cvline{工作地区}{北京}
-\cvline{期望职位}{运维工程师}
+\cvline{工作地区}{\emph{北京}}
+\cvline{期望职位}{\emph{运维工程师}}
 \section{项目经验}
 \subsection{去哪儿网}
 \cventry{2013.7-2015.4}{运维工程师}{去哪儿网}{}{做一些运维方面工作}{}
@@ -123,7 +132,7 @@
 \begin{thebibliography}{99}
 \bibitem{11} Latex 高级技巧
 \end{thebibliography}
-
+\quote{{\footnotesize Last updated: \today}} 
 \end{document}
 
 
