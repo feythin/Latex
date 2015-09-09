@@ -1,0 +1,9 @@
+#!/bin/bash
+
+texname=$1
+pdfname=${texname%%.tex}.pdf
+
+mkdir -p dist
+
+xelatex -halt-on-error -no-pdf -output-directory=dist/ $texname
+xelatex -halt-on-error -output-directory=dist/ $texname

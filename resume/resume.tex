@@ -1,0 +1,139 @@
+%!TEX program = xelatex
+\documentclass[11pt,a4paper]{moderncv}
+%使用fontspec来处理一般的西文字体，使用xunicode宏包来指明unicode编码
+\usepackage{fontspec,xunicode}
+% 以下是英文字体的设置
+\defaultfontfeatures{Scale=MatchLowercase} % 这个参数保证 serif、sans-serif 和 monospace 字体在小写时大小匹配
+\setmainfont[Numbers=OldStyle,Mapping=tex-text]{Times New Roman} % 使用 Garamond 字体，把数字设置为等宽，比较好看
+\setsansfont[Mapping=tex-text]{Times New Roman} % 使用 XeTeX 的 text-mapping 方案，正确显示 LaTeX 样式的双引号（`` ''）
+\setmonofont{Times New Roman}
+%\setmainfont{Monaco}
+% 加载 xeCJK，允许斜体、粗体的设置
+\usepackage[slantfont,boldfont]{xeCJK}
+\usepackage{xcolor}                 % replace by the encoding you are using
+\setCJKmainfont[BoldFont={SimHei}, ItalicFont={KaiTi}]{SimSun}
+\setCJKsansfont{KaiTi}
+\setCJKmonofont{STFangsong}
+\setCJKfamilyfont{song}{SimSun}
+\setCJKfamilyfont{kai}{KaiTi}
+\setCJKfamilyfont{hei}{SimHei}
+\setCJKfamilyfont{yao}{FZYaoTi}
+\setCJKfamilyfont{hwkai}{STKaiti}
+\setCJKfamilyfont{hwfs}{STFangsong}
+\setCJKfamilyfont{hws}{STSong}
+\setCJKfamilyfont{fs}{FangSong}
+\setCJKfamilyfont{yahei}{SimHei}
+
+\newcommand\song{\CJKfamily{song}}
+\newcommand\kai{\CJKfamily{kai}}
+\newcommand\hei{\CJKfamily{hei}}
+\newcommand\yao{\CJKfamily{yao}}
+\newcommand\hwkai{\CJKfamily{hwkai}}
+\newcommand\hwfs{\CJKfamily{hwfs}}
+\newcommand\hws{\CJKfamily{hws}}
+\newcommand\fs{\CJKfamily{fs}}
+\newcommand\yahei{\CJKfamily{yahei}}
+
+\newcommand{\erhao}{\fontsize{22pt}{\baselineskip}\selectfont}
+\newcommand{\xiaoerhao}{\fontsize{18pt}{\baselineskip}\selectfont}
+\newcommand{\sanhao}{\fontsize{16pt}{\baselineskip}\selectfont}
+\newcommand{\xiaosanhao}{\fontsize{15pt}{\baselineskip}\selectfont}
+\newcommand{\sihao}{\fontsize{14pt}{\baselineskip}\selectfont}
+\newcommand{\xiaosihao}{\fontsize{12pt}{\baselineskip}\selectfont}
+\newcommand{\wuhao}{\fontsize{10.5pt}{\baselineskip}\selectfont}
+\newcommand{\xiaowuhao}{\fontsize{9pt}{\baselineskip}\selectfont}
+\newcommand{\liuhao}{\fontsize{7.5pt}{\baselineskip}\selectfont}
+% moderncv themes
+%\moderncvtheme[blue]{classic}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+\moderncvtheme[green]{classic}                % idem
+
+% character encoding
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[L]{\footnotesize\textit{feythin.lau's resume}}
+\fancyfoot[C]{\footnotesize\thepage/\pageref{LastPage}}
+\fancyfoot[R]{\footnotesize\textit{Last updated: \today}}
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}						% if you want to change the width of the column with the dates
+%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
+\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
+
+% personal data
+\firstname{刘飞宇}
+\familyname{}
+\title{Feythin Lau}               % optional, remove the line if not wanted
+
+\mobile{18511357785}                    % optional, remove the line if not wanted
+%\phone{000-238217878}                      % optional, remove the line if not wanted
+%\fax{fax (optional)}                          % optional, remove the line if not wanted
+\email{feythin.lau@gmail.com}                     % optional, remove the line if not wanted
+\homepage{www.liufeiyu.cn} % optional, remove the line if not wanted
+\photo[64pt]{picture} 
+\address{北京市海淀区西三旗建材城西路育新花园}    % optional, remove the line if not wanted
+%\extrainfo{北京}
+% '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
+%\quote{}                 % optional, remove the line if not wante
+%\quote{一切皆有可能} 
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+\section{基本信息}
+\cvcomputer{姓~~~~~~~~名：}{刘飞宇}{性~~~~~~~~别：}{男}
+\cvcomputer{民~~~~~~~~族：}{汉族}{籍~~~~~~~~贯：}{湖北黄冈}
+\cvcomputer{出生日期：}{1986-03-23}{政治面貌：}{中共党员}
+\section{求职意向}
+\cvline{工作性质}{\emph{全职}}
+\cvline{工作地区}{\emph{北京}}
+\cvline{期望职位}{\emph{运维工程师}}
+\section{项目经验}
+\subsection{去哪儿网}
+\cventry{2013.7-2015.4}{运维工程师}{去哪儿网}{}{做一些运维方面工作}{}
+\section{教育经历}
+\cventry{2010.9-2013.6}{电子科技大学}{计算机应用技术}{硕士}{全日制}{}
+\cventry{2006.9-2010.7}{潍坊学院}{计算机科学与技术}{本科}{全日制}{}
+%\
+%\cvline{title}{\emph{Title}}
+%\cvline{supervisors}{Supervisors}
+%\cvline{description}{\small Short thesis abstract}
+\section{爱好}
+\subsection{Vocational}
+\cventry{year--year}{Job title}{Employer}{City}{}{Description}                % arguments 3 to 6 are optional
+\cventry{year--year}{Job title}{Employer}{City}{}{Description}                % arguments 3 to 6 are optional
+\subsection{Miscellaneous}
+\cventry{year--year}{Job title}{Employer}{City}{}{Description line 1\newline{}Description line 2}% arguments 3 to 6 are optional
+
+\renewcommand{\listitemsymbol}{-} % change the symbol for lists
+
+\section{Extra 1}
+\cvlistitem{Item 1}
+\cvlistitem{Item 2}
+%\cvlistitem[+]{Item 3}            % optional other symbol
+
+%\section{Extra 2}
+%\cvlistdoubleitem[\Neutral]{Item 1}{Item 4}
+%\cvlistdoubleitem[\Neutral]{Item 2}{Item 5}
+%\cvlistdoubleitem[\Neutral]{Item 3}{}
+
+%% Publications from a BibTeX file
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}       % 'publications' is the name of a BibTeX file
+
+\begin{thebibliography}{99}
+\bibitem{11} Latex 高级技巧
+\end{thebibliography}
+\quote{{\footnotesize Last updated: \today}} 
+\end{document}
+
+
+%% end of file `template_en.tex'.
