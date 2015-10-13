@@ -53,8 +53,9 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyfoot[L]{\footnotesize\textit{feythin.lau's resume}}
-\fancyfoot[C]{\footnotesize\thepage/\pageref{LastPage}}
+%\fancyfoot[C]{\footnotesize\thepage/\pageref{LastPage}}
 \fancyfoot[R]{\footnotesize\textit{Last updated: \today}}
+\fancyfoot[C]{\footnotesize\textit{Powerby: Latex}}
 
 % adjust the page margins
 \usepackage[scale=0.8]{geometry}
@@ -71,7 +72,7 @@
 %\phone{000-238217878}                      % optional, remove the line if not wanted
 %\fax{fax (optional)}                          % optional, remove the line if not wanted
 \email{feythin.lau@gmail.com}                     % optional, remove the line if not wanted
-\homepage{www.liufeiyu.cn} % optional, remove the line if not wanted
+\homepage{www.netopsdev.com} % optional, remove the line if not wanted
 \photo[64pt]{picture} 
 \address{北京市海淀区西三旗建材城西路育新花园}    % optional, remove the line if not wanted
 %\extrainfo{北京}
@@ -97,7 +98,25 @@
 \cvline{期望职位}{\emph{运维工程师}}
 \section{项目经验}
 \subsection{去哪儿网}
-\cventry{2013.7-2015.4}{运维工程师}{去哪儿网}{}{做一些运维方面工作}{}
+\cventry{2013.7-2015.4}{去哪儿网}{运维工程师}{}{}{%
+\begin{itemize}
+\item 管理和维护服务器硬件、软件。
+\item nginx/apache等会web服务器的安装配置,nginx的高可用性的搭建，维护，迁移等，能够根据需求，配置nginx转发等.
+\item lvs/haproxy等会配置维护. 
+\item rsyslog,logstash，kafka，elasticsearch，kibana搭建和等配置维护. 
+\item 熟悉saltstach自动化运维. 
+\item 熟悉网络基础知识，能够排查网络基本问题.
+\end{itemize}%
+}
+\subsection{窝窝团}
+\cventry{2015.4-Present}{窝窝团}{高级运维工程师}{}{}{%
+\begin{itemize}
+\item  mongodb数据库的管理和维护。
+\item  持续集成发布系统搭建和维护。作为主要参与人员负责搭建基于docker，mesos，marathon，registrator，consul，hapoxy技术的持续集成发布系统。
+\end{itemize}%
+}
+\section{培训经历}
+\cventry{2015.6-Present}{}{}{}{}{OPENLAB CCNA/CCNP培训}
 \section{教育经历}
 \cventry{2010.9-2013.6}{电子科技大学}{计算机应用技术}{硕士}{全日制}{}
 \cventry{2006.9-2010.7}{潍坊学院}{计算机科学与技术}{本科}{全日制}{}
@@ -105,18 +124,9 @@
 %\cvline{title}{\emph{Title}}
 %\cvline{supervisors}{Supervisors}
 %\cvline{description}{\small Short thesis abstract}
-\section{爱好}
-\subsection{Vocational}
-\cventry{year--year}{Job title}{Employer}{City}{}{Description}                % arguments 3 to 6 are optional
-\cventry{year--year}{Job title}{Employer}{City}{}{Description}                % arguments 3 to 6 are optional
-\subsection{Miscellaneous}
-\cventry{year--year}{Job title}{Employer}{City}{}{Description line 1\newline{}Description line 2}% arguments 3 to 6 are optional
 
-\renewcommand{\listitemsymbol}{-} % change the symbol for lists
-
-\section{Extra 1}
-\cvlistitem{Item 1}
-\cvlistitem{Item 2}
+\section{自我评价}
+\cvlistitem{随和乐观，待人诚实，做事认真，有较强自主学习能力，抗压能力强,团队合作精神强,有强烈的责任心和事业心}
 %\cvlistitem[+]{Item 3}            % optional other symbol
 
 %\section{Extra 2}
@@ -129,10 +139,6 @@
 %\bibliographystyle{plain}
 %\bibliography{publications}       % 'publications' is the name of a BibTeX file
 
-\begin{thebibliography}{99}
-\bibitem{11} Latex 高级技巧
-\end{thebibliography}
-\quote{{\footnotesize Last updated: \today}} 
 \end{document}
 
 
